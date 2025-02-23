@@ -1,6 +1,7 @@
 "use server";
 
 import { ConsumptionMethod } from "@prisma/client";
+import { redirect } from "next/navigation";
 
 import { db } from "@/lib/lib";
 
@@ -23,7 +24,7 @@ export const createOrder = async (input: CreateOrderInput) => {
     where: {
       slug: input.slug,
     },
-  })
+  });
   if (!restaurant) {
     throw new Error("Restaurante não encontrado");
   }
@@ -54,4 +55,5 @@ export const createOrder = async (input: CreateOrderInput) => {
       restaurantId: restaurant.id,
     },
   });
+  redirect(`/${input.slug}/orders`);
 };
