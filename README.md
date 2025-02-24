@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍔 Totem de Autoatendimento - McDonald's (Personalizável)
 
-## Getting Started
+Este projeto é um **totem de autoatendimento** inspirado no McDonald's, desenvolvido com **Next.js** e **Prisma**. Ele pode ser facilmente adaptado para outros restaurantes, oferecendo uma interface moderna e intuitiva.
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
 
+- ⚛️ **React** - Biblioteca para interfaces interativas
+- 🎨 **TailwindCSS** - Estilização rápida e responsiva
+- 🟦 **TypeScript** - Tipagem estática para mais segurança
+- 🛢️ **NeonDB** - Banco de dados escalável e eficiente
+- ⚡ **Next.js** - Framework para aplicações web modernas
+- 📦 **Prisma** - ORM para manipulação do banco de dados
+- 🖌 **Shadcn** - Biblioteca de componentes estilizados
+
+---
+
+## 📂 **Instalação e Configuração**
+
+### 1️⃣ **Clonar o repositório**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ **Instalar dependências**
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3️⃣ **Configurar o Prisma e o Banco de Dados**
+Instale o Prisma e o cliente:
+```bash
+npm install prisma@6.2.1 @prisma/client@6.2.1
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Realize a migração do banco de dados:
+```bash
+npx prisma migrate dev
+```
 
-## Learn More
+Se precisar adicionar dados iniciais:
+```bash
+npm install -D ts-node@10.9.1
+npx prisma db seed
+```
+> **Nota:** Antes de rodar o comando `npx prisma db seed`, adicione a configuração de *seed* no arquivo `package.json`.
 
-To learn more about Next.js, take a look at the following resources:
+### 4️⃣ **Configurar o Shadcn**
+```bash
+npx shadcn@2.3.0 init
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ▶️ **Rodando o projeto**
+```bash
+npm run dev
+```
+O projeto estará disponível em **http://localhost:3000** 🚀
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📌 **Personalização**
+Este sistema pode ser adaptado para **qualquer restaurante**, alterando apenas os produtos e algumas configurações no banco de dados.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📄 **Licença**
+Este projeto é de código aberto e pode ser modificado conforme necessário. 🔥
